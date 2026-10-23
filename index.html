@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Profile - Praktikum 3</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background: #f4f4f4;
+    padding: 10px;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    border: 1px solid black;
+    padding: 15px;
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    gap: 10px;
+  }
+
+  header .logo {
+    font-weight: bold;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  /* PROFILE TOP */
+  .top-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .foto-besar {
+    width: 200px;
+    height: 150px;
+    flex-shrink: 0;
+    border: 1px solid black;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .foto-besar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .biodata {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .biodata h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .biodata p {
+    font-size: 12px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .categories {
+    text-align: right;
+    font-size: 10px;
+    width: 120px;
+    flex-shrink: 0;
+  }
+
+  /* ARTICLE */
+  article {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  article p {
+    margin-bottom: 15px;
+  }
+
+  /* BOTTOM */
+  .bottom {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .box {
+    border: 1px solid black;
+    padding: 5px;
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .box video {
+    width: 100%;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .gallery div {
+    border: 1px solid black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+    overflow: hidden;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .attachments a,
+  aside a {
+    display: block;
+    font-size: 11px;
+    color: blue;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 11px;
+  }
+
+  /* TAMPILAN HP */
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+
+    header {
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      gap: 10px;
+    }
+
+    .top-profile {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 12px;
+    }
+
+    .foto-besar {
+      width: 120px;
+      height: 150px;
+    }
+
+    .biodata h2 {
+      font-size: 18px;
+      overflow-wrap: anywhere;
+    }
+
+    .biodata p {
+      font-size: 12px;
+    }
+
+    .categories {
+      grid-column: 1 / -1;
+      width: 100%;
+      text-align: left;
+    }
+
+    .bottom {
+      flex-direction: column;
+    }
+
+    .box {
+      width: 100%;
+      min-width: 0;
+      flex: none;
+    }
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">STT-NF | Profile</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FOTO + BIODATA -->
+  <div class="top-profile">
+    <div class="foto-besar">
+      <img src="image/IMG-20260802-WA0106.jpg" alt="Foto Profil">
+    </div>
+
+    <div class="biodata">
+      <h2>Dzakwan Abyan Zuhair</h2>
+      <p>
+        <b>Biodata:</b><br>
+        Nama: Dzakwan Abyan Zuhair<br>
+        NIM: 0110226093<br>
+        Alamat: Depok<br>
+        Email: fzjsjsjsj@gmail.com<br>
+        Telp: 085881702779
+      </p>
+    </div>
+
+    <div class="categories">
+      <b>Categories</b><br>
+      Lorem ipsum<br>
+      dolor sit<br>
+      amet<br>
+      dolor sit
+    </div>
+  </div>
+
+  <!-- ARTICLE -->
+  <article>
+    <section>
+      <p>
+        Hallo, perkenalkan nama saya Dzakwan Abyan Zuhair dari
+        kelompok 7. Saya adalah mahasiswa Nurul Fikri angkatan
+        2026 dengan IPK 4.00.
+      </p>
+
+      <p>
+        Saya suka sekali dengan desain UI/UX dan ingin memperdalam
+        pemahaman saya di bidang tersebut. Menurut saya, mendesain
+        tampilan aplikasi dan website itu menarik karena membutuhkan
+        kreativitas, ketelitian, dan kemampuan memecahkan masalah.
+        Saya ingin terus belajar agar bisa membuat desain yang
+        menarik dan mudah digunakan.
+      </p>
+    </section>
+  </article>
+
+  <!-- VIDEO, GALERI, DAN ATTACHMENTS -->
+  <div class="bottom">
+
+    <div class="box">
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <iframe
+          src="https://www.youtube.com/embed/722d3I_hUB4"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+          title="Video Profile"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p style="font-size:10px;text-align:center;margin-top:5px">
+        Video Profile
+      </p>
+    </div>
+
+    <div class="box">
+      <div class="gallery">
+        <div>
+          <img src="image/IMG-20260802-WA0106.jpg" alt="Foto 1">
+        </div>
+        <div>
+          <img src="image/IMG-20260816-WA0093.jpg" alt="Foto 2">
+        </div>
+        <div>
+          <img src="image/IMG-20260817-WA0389.jpg" alt="Foto 3">
+        </div>
+        <div>
+          <img src="image/IMG-20260804-WA0072.jpg" alt="Foto 4">
+        </div>
+      </div>
+    </div>
+
+    <aside class="box">
+      <b style="font-size:12px">Attachments</b>
+      <br><br>
+      <a href="cv.pdf" download>📎 Download CV Saya (PDF)</a>
+      <a href="portofolio.zip" download>📎 Download Portofolio</a>
+      <a href="foto.zip" download>📎 Download Koleksi Foto</a>
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2026 Praktikum 3 Layout HTML5 - Kelompok 7
+  </footer>
+
+</div>
+</body>
+</html>
+
